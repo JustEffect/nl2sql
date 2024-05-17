@@ -2,8 +2,8 @@ openai:
     apiKey: dsadasdasdsad
 
 database:
-    host: dfgdgdfgdfg
-    port: 3301
-    username: username
-    password: $DATABASE_PASSWORD
-    database: test
+    host: 192.168.1.3
+    port: 5543
+    username: eshop
+    password: MixdCJSf2P8Re1GS
+    database: eshop

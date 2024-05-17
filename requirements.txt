@@ -1,1 +1,3 @@
 envyaml
+SQLAlchemy
+psycopg2
