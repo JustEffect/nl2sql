@@ -1,0 +1,9 @@
+openai:
+    apiKey: dsadasdasdsad
+
+database:
+    host: dfgdgdfgdfg
+    port: 3301
+    username: username
+    password: $DATABASE_PASSWORD
+    database: test
