@@ -16,6 +16,7 @@ class Database:
     def _disconnect(self):
         self._connection.close()
 
+
     @staticmethod
     def _create_engine() -> Engine:
         url: str = f"postgresql+psycopg2://{config.database_username}:{config.database_password}@{config.database_host}:{config.database_port}/{config.database_database}"
