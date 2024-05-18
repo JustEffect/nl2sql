@@ -8,6 +8,6 @@ print(f"database port: {config.database_password}")
 print(f"database port: {config.database_database}")
 
 db: Database = Database()
-connection = db.database_engine.connect()
-result = connection.execute("select current_timestamp ")
-print(f"database host: {config.database_host}")
+with db.database_engine.connect() as connection:
+    result = connection.execute(text("select current_timestamp "))
+    print(f"database host: {config.database_host}")
