@@ -7,10 +7,12 @@ from config import config
 class Database:
 
     def __init__(self):
+        logging.info("initialize database")
         self._engine: Engine = self._create_engine()
         self._connection: Connection = self._engine.connect().execution_options(stream_results=True)
 
     def __del__(self):
+        logging.info("close connection to database")
         self._disconnect()
 
     def _disconnect(self):

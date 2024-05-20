@@ -26,9 +26,9 @@ ai = Ai()
 sql_database = SQLDatabase(db.get_engine())
 
 query_engine = NLSQLTableQueryEngine(
-    sql_database=sql_database, tables=["t_customer"], llm=ai.get_llm()
+    sql_database=sql_database, tables=["t_customer", "t_order", "t_order_item", "t_products"], llm=ai.get_llm()
 )
-query_str = ("kolik zákazníků žije ve městě Brno?")
+query_str = ("what price each customer spent on their order (dont sum up the price, its already the total) and print their names, price and if they've paid for it or not")
 response = query_engine.query(query_str)
 
 logging.info(response)
