@@ -15,6 +15,8 @@ class Config:
         self.openai_model: str = self._config_file.get('openai.model')
         self.openai_temperature: float = self._config_file.get('openai.temperature')
         self.openai_debug: str = self._config_file.get('openai.debug')
+        self.app_table_list: [str] = self._config_file.get('app.tables')
+        self.database_fetch_size: int = self._config_file.get('app.database_fetch_size')
 
 
 config: Config = Config()

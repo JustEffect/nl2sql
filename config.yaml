@@ -1,3 +1,11 @@
+app:
+  database_fetch_size: 10000
+  tables:
+    - t_customer
+    - t_order
+    - t_order_item
+    - t_products
+
 openai:
   apiKey: $OPENAI_API_KEY
   model: gpt-3.5-turbo
