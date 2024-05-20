@@ -8,11 +8,11 @@ from typing import Dict, Any, Iterator
 from llama_index.core.llama_pack.base import BaseLlamaPack
 import os
 import pandas as pd
-from llama_index.core.indices.struct_store import SQLTableRetrieverQueryEngine, NLSQLTableQueryEngine
+from llama_index.core.indices.struct_store import NLSQLTableQueryEngine
 from extensions import database, ai
 from config import config
 
-os.environ['OPENAI_API_KEY'] = config.openai_api_key
+#os.environ['OPENAI_API_KEY'] = config.openai_api_key
 
 
 class StreamlitChatPack(BaseLlamaPack):
